@@ -1,0 +1,23 @@
+{
+    "development": {
+        "username": "postgres",
+        "password": "12345678",
+        "database": "easyflip",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "easyflipadmin",
+        "password": "EASYFLIP-ADMIN",
+        "database": "easyflip",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "production": {
+        "username": "easyflipadmin",
+        "password": "EASYFLIP-ADMIN",
+        "database": "easyflip",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    }
+}

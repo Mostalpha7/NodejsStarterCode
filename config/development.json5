@@ -1,0 +1,20 @@
+{
+  application: {
+    port: 1300,
+    jwt: {
+      key: "5eb90nWgiGBaf6c024d207",
+      expireDate: "20w",
+      salt: 12,
+    },
+    website: "https://easyflip.ng",
+  },
+  database: {
+    username: "postgres",
+    password: "12345678",
+    databaseName: "learnEasyflipCode",
+    host: "127.0.0.1",
+    dialect: "postgres",
+  },
+  uploadPathProd: "../../var/www/html/uploads/",
+  uploadPath: "./assets/uploads/",
+}
