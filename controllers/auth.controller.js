@@ -1,6 +1,9 @@
 const AuthService = require("../services/auth.service");
 const { JsonResponse } = require("../utils/apiResponse");
-const { validateLogin } = require("../validations/user.validation");
+const {
+    validateLogin,
+    validateUser,
+} = require("../validations/user.validation");
 
 const authInstance = new AuthService();
 
@@ -16,6 +19,19 @@ exports.login = async(req, res, next) => {
     }
 };
 
-exports.register = async() => {
-    try {} catch (error) {}
+exports.register = async(req, res, next) => {
+    try {
+        // check if all required inputs are present.
+        const { error } = validateUser(req.body);
+        if (error) return JsonResponse(res, 400, error.details[0].message);
+
+        if (req.body.type !== "user") {
+            return JsonResponse(req, 400, "Type must be User");
+        }
+
+        const registeredUser = await authInstance.signUp(req.body);
+        JsonResponse(res, 200, "Registration Success", registeredUser);
+    } catch (error) {
+        next(error);
+    }
 };
