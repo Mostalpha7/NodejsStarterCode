@@ -139,6 +139,6 @@ module.exports = (sequelize, DataTypes) => {
             freezeTableName: true,
         }
     );
-    // User.sync();
+    User.sync();
     return User;
 };

@@ -1,7 +1,7 @@
 {
-    "name": "wel",
+    "name": "learnAdvanceCode",
     "version": "1.0.0",
-    "description": "",
+    "description": "Understanding advanced nodejs (learning with pedro's source code.)",
     "main": "server.js",
     "scripts": {
         "dev": "nodemon server.js",
